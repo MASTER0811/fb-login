@@ -17,5 +17,41 @@
 </style>
 <body class="bd_w bd_h allct mg0 pd0">
     <h1>None</h1>
+
+    <fb:login-button 
+    scope="public_profile,email"
+    onlogin="checkLoginState();">
+  </fb:login-button>
+
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '478267853980014',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v1.0.0'
+          });
+            
+          FB.AppEvents.logPageView();   
+            
+        };
+      
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+         
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+              statusChangeCallback(response);
+            });
+          }
+      </script>
 </body>
 </html>
