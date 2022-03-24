@@ -32,5 +32,28 @@
         });
       </script>
       <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBezyrTntjqPm0mJukFKfyLQWfOx5Ne8I4",
+          authDomain: "auth-fb-3b22a.firebaseapp.com",
+          projectId: "auth-fb-3b22a",
+          storageBucket: "auth-fb-3b22a.appspot.com",
+          messagingSenderId: "270024413066",
+          appId: "1:270024413066:web:bc233f09388c3dd5848273",
+          measurementId: "G-2R50MNSS34"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
 </body>
 </html>
